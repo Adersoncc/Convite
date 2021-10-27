@@ -1,0 +1,106 @@
+* {
+  margin: 0;
+  border: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/*     FONTES     */
+@import url('https://fonts.googleapis.com/css2? família=Roboto:wght@700&display=swap');
+
+@import url('https://fonts.googleapis.com/css2? família=Roboto:wght@400&display=swap');
+
+/*     BODY     */  
+html,
+body {
+  --black: hsl(240, 6%, 13%);
+  --grey: hsl(240, 9%, 89%);
+  height: 100%;
+  font-family: 'Roboto', sans-serif;
+  -webkit-font-smoothing: antialiased;
+}
+
+body {
+  display: grid;
+  place-items: center;
+}
+
+main {
+  background: url(../images/Mobile.png) no-repeat center/cover;
+  width: 100vw;
+  height: 100vh;
+  min-height: 812px;
+}
+
+.container {
+  max-width: 250px;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+  color: var(--grey);
+}
+
+.picture {
+  width: 10rem;
+  margin: 11.5rem auto 0;
+  /* position relative logo*/
+  position: relative;
+}
+
+.picture span {
+  position: absolute;
+  top: -15px;
+  z-index: 1;
+}
+
+.picture > img {
+  width: 10rem;
+  height: 11.5rem;
+  object-fit: cover;
+
+  clip-path: polygon(50% 0, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
+}
+
+h1 {
+  font-size: 1.5 rem;
+  margin-top: 1.5rem;
+}
+
+.git_name {
+  justify-content: center;
+}
+
+a {
+  color: var(--grey);
+  text-decoration: none;
+  margin-top: 0.25rem;
+  display: flex;
+  gap: 0.75rem;
+  justify-content: center;
+}
+
+p {
+  margin-top: 2rem;
+}
+
+ul {
+  margin-top: 3rem;
+  list-style: none;
+  display: flex;
+  gap: 0.5rem;
+  justify-content: center;
+}
+
+ul li:hover {
+  transform: scale(1.1);
+  filter: brightness(50%);
+  transition: 0.3s ease-in-out;
+}
+
+footer {
+  color: var(--grey);
+  margin-top: 170px;
+  text-align: center;
+}
+
+/* adersoncc */

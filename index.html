@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Aderson Costa - NLW Heat</title>
+  <link rel="stylesheet" href="css/style.css"></link>
+  <link rel="text_Aderson" href="http://github.com/adersoncc">
+</head>
+<body>
+  <main>
+    <div class="container">
+      <div class="picture">
+        <span>
+          <img src="images/selo.svg" alt="Selo Rocketseat">
+        </span>
+        <img id="user_img" src="x" alt="Foto Perfil">
+      </div>
+      <h1 id="user_name">x</h1>
+      <div class="git_name">
+        <a id="user_link" href="https://github.com/adersoncc" target="_blank">
+          <img  src="images/github 2.svg" alt="imagem do github">
+          <span id="user_login">x</span></a>
+      </div>      
+      <p id="user_bio">Fullstack web development student.</p>
+      <ul id="social_links">
+        <li class="linkedin">
+          <a href="https://linkedin.com" target="_blank">
+          <img class="img_media" src="images/linkedin.svg" width="48px" height="48px"  alt="icone do linkedin"/>
+          </a>
+        </li>
+        <li class="twitter">
+          <a href="https://twitter.com" target="_blank">
+          <img class="img_media" src="images/twitter.svg" width="48px" height="48px" alt="icone do Twitter"/>
+          </a>
+        </li>
+      </ul>
+    </div>
+    <footer>
+      <h6>Áderson Costa</h6>
+    </footer>
+  </main>  
+  <script>
+  const links_social_media ={
+      github:"adersoncc",
+      twitter:"adersoncc",      
+      linkedin:"in/aderson1cc"
+    }
+    function changeSocialMediaLinks () {
+      for(let li of social_links.children){
+        const media = li.getAttribute("class")
+        li.children[0].href = `https://${media}.com/${links_social_media[media]}`
+        li.children[0].href 
+      }
+    }
+    changeSocialMediaLinks()
+
+    function getGithubProfileInfos() {
+      const url = `http://api.github.com/users/${links_social_media.github}`
+      //  alert(url)
+
+      fetch(url)
+      .then(response => response.json())
+      .then(data => {
+        user_name.textContent = data.name
+        // user_bio.textContent = data.bio
+        user_link.href = data.html_url
+        user_img.src = data.avatar_url        
+        user_login.textContent = data.login
+      })
+    }
+    getGithubProfileInfos()
+
+     
+  </script>
+</body>
+</html>
+
+<!-- adersoncc -->
