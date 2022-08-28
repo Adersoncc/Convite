@@ -1,7 +1,7 @@
 const links_social_media = {
   github: 'adersoncc',
   twitter: 'adersoncc',
-  linkedin: 'in/aderson1cc'
+  linkedin: 'in/adersoncc'
 }
 function changeSocialMediaLinks() {
   for (let li of social_links.children) {
